@@ -25,10 +25,6 @@ The project was successfully validated with a **125% score**, including bonus im
 ## 📁 Files
 - `minishell.h` → Contains function prototypes and required macros  
 - `minishell.c` → Main loop handling user input and execution  
-- `builtins.c` → Implements shell built-in commands  
-- `execution.c` → Handles process execution and forking  
-- `signals.c` → Manages signal handling (Ctrl-C, Ctrl-D, etc.)  
-- `parser.c` → Parses user input and manages syntax  
 - `Makefile` → Automates compilation (`all`, `clean`, `fclean`, `re`, `bonus`)  
 
 ## 🚀 Extended Features
