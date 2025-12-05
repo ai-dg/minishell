@@ -1,7 +1,5 @@
 # Minishell - A Custom Shell with Extra Features
 
-<img src="https://github.com/user-attachments/assets/93df974f-f713-4013-83ab-fcc961d6988f" width="500">
-
 ![Score](https://img.shields.io/badge/Score-125%25-brightgreen)  
 📌 **42 School - Unix Process & Shell Project**  
 
