@@ -8,6 +8,50 @@
 It supports command execution, environment variables, redirections, pipes, and **additional enhancements beyond the mandatory requirements**.  
 Developed as a **team project** with [Christophe Albor Pirame](https://github.com/CronopioSalvaje), we **extended** its functionality with unique features.
 
+```mermaid
+flowchart TB
+    %% ===== Core flow =====
+    A[User input line] --> B[Lexer]
+    B --> C[Parser]
+    C --> D[AST command tree]
+
+    D --> E{Built-in command}
+    E -->|Yes| F[Built-in execution]
+    E -->|No| G[External command execution]
+
+    %% ===== Execution paths =====
+    G --> H[Create pipes if needed]
+    H --> I[Fork process]
+    I --> J[Redirections setup<br/>dup2]
+    J --> K[execve]
+
+    F --> L[Update environment]
+    K --> L
+
+    %% ===== Signals & environment =====
+    A --> M[Signal handler]
+    M --> A
+
+    L --> N[Return status]
+    N --> A
+
+    %% ===== Styling =====
+    classDef input fill:#4c72b0,color:#ffffff,stroke:#2c4a7a,stroke-width:2px;
+    classDef parse fill:#55a868,color:#ffffff,stroke:#2f6f46,stroke-width:2px;
+    classDef ast fill:#8172b2,color:#ffffff,stroke:#4b3f7a,stroke-width:2px;
+    classDef exec fill:#dd8452,color:#ffffff,stroke:#8a4a24,stroke-width:2px;
+    classDef signal fill:#c44e52,color:#ffffff,stroke:#7a1f24,stroke-width:2px;
+    classDef env fill:#7f7f7f,color:#ffffff,stroke:#4a4a4a,stroke-width:2px;
+
+    class A input
+    class B,C parse
+    class D ast
+    class E,F,G,H,I,J,K exec
+    class M signal
+    class L,N env
+```
+
+
 ## ▌ Key Features
 ▸ **Bash-like prompt** with Git branch detection  
 ▸ **Supports standard shell operators** (`|`, `>`, `<`, `>>`, `<<`)  
