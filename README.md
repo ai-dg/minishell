@@ -8,7 +8,7 @@
 It supports command execution, environment variables, redirections, pipes, and **additional enhancements beyond the mandatory requirements**.  
 Developed as a **team project** with [Christophe Albor Pirame](https://github.com/CronopioSalvaje), we **extended** its functionality with unique features.
 
-<img width="708" height="1893" alt="image" src="https://github.com/user-attachments/assets/500cb8d6-10ee-4211-9a6a-11bd47376635" />
+<!-- <img width="708" height="1893" alt="image" src="https://github.com/user-attachments/assets/500cb8d6-10ee-4211-9a6a-11bd47376635" /> -->
 
 
 ```mermaid
