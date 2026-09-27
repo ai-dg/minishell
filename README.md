@@ -68,9 +68,9 @@ flowchart TB
 The project was successfully validated with a **125% score**, including bonus implementations. 🎉
 
 ## ▌ Files
-- `minishell.h` → Contains function prototypes and required macros  
-- `minishell.c` → Main loop handling user input and execution  
-- `Makefile` → Automates compilation (`all`, `clean`, `fclean`, `re`, `bonus`)  
+- `Includes/minishell.h` → Contains function prototypes and required macros  
+- `Srcs/minishell.c` → Main loop handling user input and execution  
+- `Makefile` → Automates compilation (`all`, `clean`, `fclean`, `re`, `debug`)  
 
 ## ▌ Extended Features
 ### **■ Enhanced Prompt (Zsh-like)**
@@ -103,6 +103,7 @@ The project was successfully validated with a **125% score**, including bonus im
 ```sh
 make
 ``` 
+Requires the readline development library (e.g. `libreadline-dev`).
 
 ### ■ **Run Minishell**
 ```sh
@@ -121,8 +122,8 @@ echo "Hello" | cat > output.txt
 
 ### ■ **Check Git Status in the Prompt**
 ```sh
-cd my_git_repo  
-minishell
+./minishell  
+cd my_git_repo
 ```
 
 ## 📜 License
